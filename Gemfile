@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '3.1.2'
 
 # Use specific branch of Rails
 gem 'rails', github: 'rails/rails', branch: '7-0-stable'
@@ -21,14 +21,15 @@ gem 'bundle-audit'
 gem 'annotate'
 
 # Use the Thin web server [https://github.com/macournoyer/thin]
-gem 'thin'
+#gem 'thin'
 
 # AMS [https://github.com/rails-api/active_model_serializers]
 # gem 'active_model_serializers'
 
 # Splitclient [https://help.split.io/hc/en-us] Optional
 # gem 'splitclient-rb'
-
+#
+#
 # View Components/Partials  [https://viewcomponent.org/]
 gem 'view_component'
 
@@ -111,7 +112,7 @@ gem 'redis', '~> 4.0'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -122,6 +123,7 @@ gem 'sassc-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # gem 'byebug', '~> 9.0'
+  gem 'puma'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker', '~> 2.19'
